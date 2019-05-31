@@ -1,0 +1,230 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/widget_margin"
+    android:background="@color/widget_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:contentDescription="@string/appwidget_text"
+        android:text="@string/text_header"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:background="@drawable/header_color"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ProgressBar
+                android:id="@+id/firstProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="22"
+                android:padding="15dp"
+                android:minHeight="40dp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/txtFirst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="For sure! He's done."
+                android:layout_centerInParent="true"
+                android:layout_marginStart="15dp"
+                android:paddingLeft="5dp"
+                android:textSize="@dimen/widget_text_size"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtFirstPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="22%"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/widget_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/laySec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ProgressBar
+                android:id="@+id/secondProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="56"
+                android:padding="15dp"
+                android:minHeight="40dp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:text="He still has a lot left in the tank!"
+                android:textSize="@dimen/widget_text_size"/>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/txtSecPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="56%"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/widget_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ProgressBar
+                android:id="@+id/thirdProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="8"
+                android:padding="15dp"
+                android:minHeight="40dp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:text="I'm not interested..."
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:padding="15dp"
+                android:textSize="@dimen/widget_text_size"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtThirdPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="8%"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/widget_text_size"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layFourth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <ProgressBar
+                android:id="@+id/fourthProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:progressDrawable="@drawable/custom_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="14"
+                android:padding="15dp"
+                android:minHeight="40dp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="30dp"
+                android:text="Who? Is he still playing?"
+                android:padding="15dp"
+                android:textSize="@dimen/widget_text_size"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtFourthPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="14%"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/widget_text_size"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
