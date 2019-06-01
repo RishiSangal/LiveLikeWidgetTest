@@ -15,6 +15,6 @@
         android:padding="50dp"
         android:textSize="20sp"
         android:textColor="#000"
-        android:text="The widgets must have been added to your Device. Please go to the Widgets section."/>
+        android:text="The widgets have been added to your Device. Please go to the Widgets section."/>
 
 </RelativeLayout>

@@ -1,39 +1,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/widget_margin"
+    android:padding="10dp"
+
     android:background="@color/widget_back"
     android:orientation="vertical">
 
-    <!--<HorizontalScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content">-->
+    <ListView
+        android:id="@+id/lstImages"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
 
-        <!--<RelativeLayout-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content">-->
+    </ListView>
 
 
-            <!--<ImageView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:src="@mipmap/ic_launcher"/>-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="23%"-->
-                <!--android:layout_alignParentRight="true"/>-->
-        <!--</RelativeLayout>-->
-    <!--</HorizontalScrollView>-->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="8dp"
         android:gravity="center"
-        android:contentDescription="@string/appwidget_text"
-        android:text="@string/text_header"
+        android:text="@string/text_image_footer"
         android:textSize="16sp"
         android:padding="10dp"
         android:background="@drawable/header_color"
