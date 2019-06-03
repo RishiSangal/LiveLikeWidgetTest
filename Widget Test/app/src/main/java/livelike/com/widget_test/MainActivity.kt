@@ -12,23 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        var editText = findViewById<EditText>(R.id.edit_text)
-//        var button = findViewById<Button>(R.id.button)
 
         val intent = Intent(this, TextWidget::class.java)
         intent.action = "ACTIVITY_ACTION"
 
-        //This action will send broadcast to update the widget
         AppWidgetManager.getInstance(application).getAppWidgetIds(ComponentName
         (application,TextWidget::class.java))
-//        intent.putExtra("name", editText.text.toString())
         sendBroadcast(intent)
 
         val intentTwo = Intent(this, ImageWidget::class.java)
         intentTwo.action = "ACTIVITY_ACTION"
         AppWidgetManager.getInstance(application).getAppWidgetIds(ComponentName
         (application,ImageWidget::class.java))
-//        intent.putExtra("name", editText.text.toString())
         sendBroadcast(intentTwo)
     }
 }

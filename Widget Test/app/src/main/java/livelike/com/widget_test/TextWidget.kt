@@ -25,7 +25,6 @@ class TextWidget : AppWidgetProvider() {
 
     @TargetApi(Build.VERSION_CODES.M)
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
-        // There may be multiple widgets active, so update all of them
         for (appWidgetId in appWidgetIds) {
             Log.d(WIDGET_TAG,"update")
             updateAppWidget(context, appWidgetManager, appWidgetId)
@@ -77,14 +76,6 @@ class TextWidget : AppWidgetProvider() {
             appWidgetManager.updateAppWidget(appWidget, views)
 
         }
-//        else if ((intent.action.equals("ACTIVITY_ACTION"))) {
-//            val views = RemoteViews(context.packageName, R.layout.text_widget)
-//            val text = intent.getStringExtra("name")
-//            views.setTextViewText(R.id.widget_button, text)
-//            val appWidget = ComponentName(context, TextWidget::class.java!!)
-//            val appWidgetManager = AppWidgetManager.getInstance(context)
-//            appWidgetManager.updateAppWidget(appWidget, views)
-//        }
     }
 
     private fun setbackGround(views: RemoteViews, action: String?) {
@@ -124,33 +115,10 @@ class TextWidget : AppWidgetProvider() {
         val views = RemoteViews(context.packageName, R.layout.text_widget)
 
 
-//        val timer = object: CountDownTimer(60000, 1000) {
-//            override fun onTick(millisUntilFinished: Long) {
-//                views.setTextViewText(R.id.txtFirstPercentage, ""+millisUntilFinished/1000)
-//            }
-//
-//            override fun onFinish() {
-//
-//            }
-//        }
-//        timer.start()
-
-
-//        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"))
-//        val pendingIntent = PendingIntent.getActivity(context, 0, intent, 0)
-////        views.setOnClickPendingIntent(R.id.widget_button, pendingIntent)
-//        val intentTwo = Intent(context, TextWidget::class.java)
-//        intentTwo.action = ACTION_SIMPLEAPPWIDGET
-//        val pendingIntentTwo = PendingIntent.getBroadcast(context, 0, intentTwo,
-//                PendingIntent.FLAG_UPDATE_CURRENT)
-//        views.setOnClickPendingIntent(R.id.widget_button, pendingIntentTwo)
-//        views.setOnClickPendingIntent(R.id.google_button, pendingIntent)
-
         views.setOnClickPendingIntent(R.id.layFirst, getPendingSelfIntent(context, FirstClick));
         views.setOnClickPendingIntent(R.id.laySec, getPendingSelfIntent(context, SecondClick));
         views.setOnClickPendingIntent(R.id.layThird, getPendingSelfIntent(context, ThirdClick));
         views.setOnClickPendingIntent(R.id.layFourth, getPendingSelfIntent(context, FourthClick));
-//        views.setInt(R.id.layFirst, "setBackground", context.getDrawable(R.drawable.header_color))
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }
